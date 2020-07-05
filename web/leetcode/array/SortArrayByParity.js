@@ -1,6 +1,5 @@
 /**
  * LeetCode 905. Sort Array By Parity.
- * 
  * @param {number[]} A
  * @return {number[]}
  */
