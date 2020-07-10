@@ -3,6 +3,10 @@ package programmers.hash;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * ¿ß¿Â
+ * https://programmers.co.kr/learn/courses/30/lessons/42578
+ */
 public class Disguise {
 	public int solution(String[][] clothes) {
 		HashMap<String, Integer> clothesMap = new HashMap<String, Integer>();
