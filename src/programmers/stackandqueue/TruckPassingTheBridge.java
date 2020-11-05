@@ -25,7 +25,7 @@ public class TruckPassingTheBridge {
 	public int solution(int bridge_length, int weight, int[] truck_weights)
 	{
         int currentTime = 0;
-        int accrossingTruckWeights = 0;
+        int passingTruckWeights = 0;
         Queue<Integer> q = new LinkedList<>();
         for (int truck : truck_weights)
         {
@@ -34,17 +34,17 @@ public class TruckPassingTheBridge {
 	            if (q.isEmpty())
 	            {
 	                q.offer(truck);
-	                accrossingTruckWeights += truck;
+	                passingTruckWeights += truck;
 	                currentTime++;
 	                break;
 	            }
 	            else if (q.size() == bridge_length)
 	            {
-	            	accrossingTruckWeights -= q.poll();
+	            	passingTruckWeights -= q.poll();
 	            }
 	            else
 	            {
-	                if (accrossingTruckWeights + truck > weight)
+	                if (passingTruckWeights + truck > weight)
 	                {
 	                    currentTime++;
 	                    q.offer(0);
@@ -52,7 +52,7 @@ public class TruckPassingTheBridge {
 	                else
 	                {
 	                    q.offer(truck);
-	                    accrossingTruckWeights += truck;
+	                    passingTruckWeights += truck;
 	                    currentTime++;
 	                    break;
 	                }
