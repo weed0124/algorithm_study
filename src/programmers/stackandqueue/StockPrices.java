@@ -1,5 +1,9 @@
 package programmers.stackandqueue;
 
+/**
+ * 주식가격
+ * https://programmers.co.kr/learn/courses/30/lessons/42584
+ */
 public class StockPrices {
 	
 	public static void main(String[] args)
