@@ -1,5 +1,9 @@
 package leetcode.linkedlist;
 
+/**
+ * LeetCode 21. Merge Two Sorted Lists
+ * https://leetcode.com/problems/merge-two-sorted-lists/
+ */
 public class MergeTwoSortedLists {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		// 한쪽이 null이면 다른 list를 반환
