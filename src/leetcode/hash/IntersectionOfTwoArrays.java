@@ -1,6 +1,7 @@
 package leetcode.hash;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,16 +18,25 @@ import java.util.Map;
  * https://leetcode.com/problems/intersection-of-two-arrays-ii/
  */
 public class IntersectionOfTwoArrays {
+	
+	public static void main(String[] args)
+	{
+		IntersectionOfTwoArrays iot = new IntersectionOfTwoArrays();
+		int[] testCase1Left = {1, 2, 2, 1};
+		int[] testCase1Right = {2, 2};
+		iot.intersectArrays(testCase1Left, testCase1Right);
+	}
+	
 	/**
 	 * Case 1. HashMap
 	 * Runtime: 4ms
 	 * Memory Usage: 39.1MB
 	 */
-	public int[] intersect(int[] nums1, int[] nums2) {
+	public int[] intersectHash(int[] nums1, int[] nums2) {
 		// 첫번째 인자로 들어온 배열의 크기가 클때를 기준으로 잡기위해 변경처리
         if (nums1.length > nums2.length)
         {
-            return intersect(nums2, nums1);
+            return intersectHash(nums2, nums1);
         }
         
         Map<Integer, Integer> map = new HashMap<>();
@@ -53,4 +63,38 @@ public class IntersectionOfTwoArrays {
         // 문제에서 원한 결과 리턴값은 정수형 배열이므로 배열로 변환해준다.
         return result.stream().mapToInt(i -> i.intValue()).toArray();
     }
+	
+	/**
+	 * Case 2. Array
+	 * Runtime: 2ms
+	 * Memory Usage: 40.4MB
+	 */
+	public int[] intersectArrays(int[] nums1, int[] nums2)
+	{
+		Arrays.sort(nums1);
+		Arrays.sort(nums2);
+		
+		int i = 0, j = 0, k = 0;
+		
+		// 정렬된 두 배열을 각각 크기를 비교하고 같으면 기존의 배열 하나를 기준으로 변경시킨다.
+		while (i < nums1.length && j < nums2.length)
+		{
+			if (nums1[i] < nums2[j])
+			{
+				++i;
+			}
+			else if (nums1[i] > nums2[j])
+			{
+				++j;
+			}
+			else
+			{
+				nums1[k++] = nums1[i++];
+				++j;
+			}
+		}
+		
+		// 기존 배열 중 변경점 인덱스까지를 카피하여 반환
+		return Arrays.copyOfRange(nums1, 0, k);
+	}
 }
