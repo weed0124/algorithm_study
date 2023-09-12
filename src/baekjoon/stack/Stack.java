@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * https://www.acmicpc.net/problem/10828
- * 스택
+ * 스택 
  */
 public class Stack {
 	public static void main(String[] args) throws IOException {
