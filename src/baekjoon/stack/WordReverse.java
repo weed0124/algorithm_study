@@ -1,0 +1,36 @@
+package baekjoon.stack;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Stack;
+
+/**
+ * https://www.acmicpc.net/problem/9093
+ * 단어뒤집기
+ */
+public class WordReverse {
+	public static void main(String[] args) throws NumberFormatException, IOException { 
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int n = Integer.parseInt(br.readLine());
+		
+		while (n-- > 0) {
+			String word = br.readLine() + "\n";
+			Stack<Character> stk = new Stack<>();
+			for (char c : word.toCharArray()) {
+				if (c == '\n' || c == ' ') {
+					while (!stk.isEmpty()) {
+						bw.write(stk.pop());
+					}
+					bw.write(c);
+				} else {
+					stk.push(c);
+				}
+			}
+		}
+		bw.flush();
+	}
+}
