@@ -10,6 +10,10 @@ import java.util.Scanner;
  * 스택
  */
 public class Stack {
+	
+	/*
+	 * JAVA 라이브러리로 주어지는 Stack이 있지만 연습 겸 배열로 구현
+	 */
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

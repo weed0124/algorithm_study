@@ -12,6 +12,14 @@ import java.util.Stack;
  * https://www.acmicpc.net/problem/1406
  */
 public class Editor {
+	
+	/*
+	 * 배열로도 풀 수 있으나 해당 문제의 경우 시간제한과 주어진 정수의 범위가 넓으므로
+	 * 스택의 사용이 필요함
+	 * 
+	 * 커서를 기준으로 좌/우측 두개의 스택으로 나누어 현재 커서 위치를 처리하고,
+	 * 결과 출력을 위해 마지막에 두개의 스택을 합친 후 출력 처리함.
+	 */
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

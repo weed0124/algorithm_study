@@ -13,6 +13,16 @@ import java.util.Stack;
  * https://www.acmicpc.net/problem/9012
  */
 public class Parenthesis {
+	
+	/*
+	 * 괄호가 잘못되는 경우는 아래와 같이
+	 * 1. ( 가 많은 경우
+	 * 2. ) 가 많은 경우 
+	 * 두 가지로 분류가 되고 개수만 체크해서 기준을 정해 더하고 빼면 되지만 스택을 사용하라고 하였으니
+	 * 한가지 문자를 정하여 해당 문자가 나올 경우 Stack에 넣고 반대의 경우 뺀다.
+	 * 
+	 * 위 두가지 경우에 대해서 고려해야할 사항이 다르므로 두가지 및 예외사항에 대한 처리를 해줌
+	 */
 	public static String isValid(String data) {
 		Stack<Character> stk = new Stack<Character>();
 		try {
