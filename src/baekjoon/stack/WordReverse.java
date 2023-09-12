@@ -9,7 +9,7 @@ import java.util.Stack;
 
 /**
  * https://www.acmicpc.net/problem/9093
- * ´Ü¾îµÚÁý±â
+ * ë‹¨ì–´ ë’¤ì§‘ê¸°
  */
 public class WordReverse {
 	public static void main(String[] args) throws NumberFormatException, IOException { 
