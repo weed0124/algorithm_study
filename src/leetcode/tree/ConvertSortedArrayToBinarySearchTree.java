@@ -5,10 +5,7 @@ package leetcode.tree;
  * https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
  */
 public class ConvertSortedArrayToBinarySearchTree {
-	
-	/**
-	 * 균형이진탐색트리(AVL트리)를 구하는 문제
-	 */
+
 	public TreeNode sortedArrayToBST(int[] nums) {
         if (nums.length == 0) {
             return null;
