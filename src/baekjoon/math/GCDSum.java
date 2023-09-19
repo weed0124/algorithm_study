@@ -12,7 +12,7 @@ public class GCDSum {
 		int n = sc.nextInt();
 		
 		while (n-- > 0) {
-			int sum = 0;
+			long sum = 0;
 			
 			int m = sc.nextInt();
 			int[] arr = new int[m];
