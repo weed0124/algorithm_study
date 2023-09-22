@@ -35,6 +35,7 @@ public class Tiling {
 			return d[n];
 		}
 		
+		// 직사각형 (1 * 2)의 경우의 수 + 직사각형 (2 * 1)의 경우의 수
 		d[n] = solution(n - 1) + solution(n - 2);
 		
 		return d[n] % 10007;
