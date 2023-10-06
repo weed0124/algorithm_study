@@ -2,6 +2,10 @@ package baekjoon.dynamic;
 
 import java.util.Scanner;
 
+/**
+ * https://www.acmicpc.net/problem/1309
+ * 동물원
+ */
 public class Zoo {
 	public static final int mod = 9901;
 	
