@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * https://www.acmicpc.net/problem/11055
- * 가장 큰 증가하는 부분 수열(Bigger Increasing Subsequence)
+ * 가장 큰 증가하는 부분 수열(Biggest Increasing Subsequence)
  * 
  * A[N]까지의 합을 D[N]라고 하면
  * D[N] = D[N - 1] + A[N]
