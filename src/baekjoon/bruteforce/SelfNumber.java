@@ -7,33 +7,61 @@ package baekjoon.bruteforce;
  * 문제범위는 최대 10000개 이하로 모든 경우의수 체크
  * 두가지 방법으로 풀이가능
  * 1. 각 문자열로 잘라서 처리 -> 메모리 14864KB 시간 136ms
- * 2. 해당 값을 10으로 나눈 나머지값을 반복하여 처리
+ * 2. 해당 값을 10으로 나눈 나머지값을 반복하여 처리 -> 메모리 13884KB 시간 116ms
+ * 
+ * 시간차이 및 코드 길이는 크게 안남 편한대로 처리하면 될듯
  */
 public class SelfNumber {
+//	static int[] check = new int[10000];
+	static boolean[] check = new boolean[10000];
+	
+	public static int d(int n) {
+		int sum = n;
+		while (n > 0) {
+			sum += n % 10;
+			n /= 10;
+		}
+		return sum;
+	}
+	
 	public static void main(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		
-		int[] result = new int[10001];
 		for (int i = 1; i < 10000; i++) {
-			result[i] = i;
+			int construct = d(i);
+			if (construct < 10000) {
+				check[construct] = true;
+			}
+			
+			if (!check[i]) {
+				sb.append(i).append("\n");
+			}
+		}
+		
+		System.out.println(sb);
+		
+		/* 1. 숫자를 자리수별로 문자열로 잘라서 처리 
+		for (int i = 1; i < 10000; i++) {
+			check[i] = i;
 		}
 		
 		for (int i = 1; i < 10000; i++) {
 			char[] c = String.valueOf(i).toCharArray();
-			int test = i;
+			int sum = i;
 			for (int j = 0; j < c.length; j++) {
-				test += Character.digit(c[j], 10);
+				sum += Character.digit(c[j], 10);
 			}
-			if (test < 10000) {
-				result[test] = -1;
+			if (sum < 10000) {
+				check[sum] = -1;
 			}
 		}
 		
 		for (int i = 1; i < 10000; i++) {
-			if (result[i] != -1) {
+			if (check[i] != -1) {
 				sb.append(i).append("\n");
 			}
 		}
 		System.out.println(sb);
+		*/
 	}
 }
