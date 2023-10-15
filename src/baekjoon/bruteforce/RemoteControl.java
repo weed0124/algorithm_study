@@ -12,7 +12,7 @@ import java.util.Scanner;
  * 고로 + 50만번 또는 - 50만번을 누를 수 있는 채널이 구해질 수 있는 채널의 최대범위이므로 0부터 100만까지의 채널의 경우를 체크해야함
  * 문제에서 주어진 초기 채널은 100번이고 -채널은 없으므로 초기값을 잘 지정해놓고 풀어야함  
  */
-public class Remote {
+public class RemoteControl {
 	static boolean[] broken = new boolean[10];
 	
 	public static int check(int n) {
