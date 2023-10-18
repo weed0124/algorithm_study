@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * https://www.acmicpc.net/problem/156500
+ * https://www.acmicpc.net/problem/15650
  * N과M(2)
  * 
  * N과 M1 과 같은 방식으로 해결하면 되고, 추가 조건인 오름차순으로 출력이 되게 하려면
