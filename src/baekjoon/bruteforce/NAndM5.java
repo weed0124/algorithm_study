@@ -6,6 +6,7 @@ import java.util.Scanner;
  * https://www.acmicpc.net/problem/15654
  * N과M(5)
  * 
+ * N과M1과 동일한문제 1~N까지의 범위였던 수를 입력받은 수로 변경해서 풀어주기만 하면 됨
  */
 public class NAndM5 {
 	static StringBuilder sb;
