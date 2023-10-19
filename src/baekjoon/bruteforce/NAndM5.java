@@ -1,5 +1,6 @@
 package baekjoon.bruteforce;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -47,6 +48,7 @@ public class NAndM5 {
 			a[i] = sc.nextInt();
 		}
 		
+//		Arrays.sort(a, 0, n);//으로 변경 가능
 		for (int i = 0; i < n - 1; i++) {
 			for (int j = i + 1; j < n; j++) {
 				if (a[i] > a[j]) {
